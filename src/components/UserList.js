@@ -13,7 +13,6 @@ class UserList extends Component {
   }
 
   renderUsers() {
-    //debugger;
     if(this.props.users) {
       const userList = _.toArray(this.props.users);
       return userList.map((user, index) => {

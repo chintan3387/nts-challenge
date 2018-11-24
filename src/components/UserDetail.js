@@ -38,7 +38,6 @@ class UserDetail extends Component {
 };
 
 function mapStateToProps({ users }, ownProps) {
-  debugger;
   return {
     user: users[ownProps.match.params.username]
   };
