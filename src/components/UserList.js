@@ -22,7 +22,7 @@ class UserList extends Component {
             <td>{user.name}</td>
             <td>{user.age}</td>
             <td>{user.hobbies}</td>
-            <td>{<WeightChart weights={user.weight} />}</td>
+            <td>{<WeightChart weights={user.weight} width={300} height={200} />}</td>
           </tr>
         );
       })
@@ -39,8 +39,8 @@ class UserList extends Component {
     }
   }
 
-  handleOnChange =(e) => {
-    this.props.history.push(`/userdetail/${e.target.value}`)
+  handleOnChange =(eventKey , e) => {
+    this.props.history.push(`/userdetail/${eventKey}`)
     this.props.fetchUsers();
   }
 

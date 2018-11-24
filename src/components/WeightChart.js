@@ -11,8 +11,8 @@ const WeightChart = (props) => {
   return (
     <AreaChart
       data={data}
-      width={400}
-      height={400}
+      width={props.width}
+      height={props.height}
       margin={{top: 10, bottom: 50, left: 50, right: 10 }} />
   );
 

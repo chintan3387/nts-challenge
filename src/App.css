@@ -20,9 +20,8 @@ th , td {
   min-width: 6rem;
 }
 
-select {
-  margin: 25px;
-  padding: 10px;
+.dropdown {
+  margin: 1.5rem;
 }
 
 a {
@@ -33,4 +32,16 @@ a {
 
 label {
   font-weight: bold;
+}
+
+.user-details {
+  margin: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  max-width: 500px;
+}
+
+.user-header {
+  margin-left: 2rem;
+  text-align: left !important;
 }

@@ -20,12 +20,15 @@ class UserDetail extends Component {
           <div className="text-xs-left">
           <Link to="/" className="btn btn-primary"> Back To List</Link>
           </div>
-          <div>
-            <h3>User Details for {user.username}</h3>
+          <div className="user-header">
+            <h4>User Details for {user.username}</h4>
+          </div>
+          <div className="user-details text-xs-left">
+            <label>Name:</label>&nbsp;<span>{user.name}</span><br />
             <label>Age:</label>&nbsp;<span>{user.age}</span><br />
             <label>Hobbies:</label> &nbsp;<span>{user.hobbies}</span> <br/>
             <h4>Weight Chart:</h4>
-            <WeightChart weights={user.weight} />
+            <WeightChart weights={user.weight}  width={400} height={400}/>
           </div>
         </>
       );
