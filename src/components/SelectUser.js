@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { DropdownButton, MenuItem } from 'react-bootstrap';
+import _ from 'lodash';
 
 const SelectUser  = (props) => {
   /*return (
@@ -18,7 +19,7 @@ const SelectUser  = (props) => {
       title="Select User ..."
       id="dropdown-basic-1"
     >
-    { props.users && props.users.map((user, index) => {
+    { props.users && _.map(props.users, (user, index) => {
       return <MenuItem
               eventKey={user.username}
               key={index}

@@ -14,8 +14,7 @@ class UserList extends Component {
 
   renderUsers() {
     if(this.props.users) {
-      const userList = _.toArray(this.props.users);
-      return userList.map((user, index) => {
+      return _.map(this.props.users, (user,index) =>  {
         return (
           <tr key={index}>
             <td><Link to={`/userdetail/${user.username}`}>{user.username}</Link></td>
@@ -45,12 +44,11 @@ class UserList extends Component {
   }
 
   render() {
-    const userList = _.toArray(this.props.users);
     return (
       <>
       <h3> NTS Conding Challenge</h3>
       <div>
-        <SelectUser users={userList} handleOnChange={this.handleOnChange} />
+        <SelectUser users={this.props.users} handleOnChange={this.handleOnChange} />
       </div>
       <table className="user-list" align="center">
         <thead>

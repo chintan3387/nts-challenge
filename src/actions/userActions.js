@@ -10,10 +10,9 @@ export function fetchUsers() {
   };
 }
 
-export function fetchUser() {
-  const request = axios.get(`${API_URL}nts-userlist`);
+export function fetchUser(username) {
   return {
     type: FETCH_USER_DETAILS,
-    payload: request
+    payload: username
   }
 }
